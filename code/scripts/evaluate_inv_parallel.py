@@ -136,12 +136,12 @@ def evaluate(**deps):
     model_low = model_low_config()
     model_high = model_high_config()
     diffusion = diffusion_config(model_low = model_low, model_high = model_high)
-    # end
+    
     trainer = trainer_config(diffusion, dataset, renderer)
-    # edit
+    
     logger.print(utils.report_parameters(model_low), color='green')
     logger.print(utils.report_parameters(model_high), color='green')
-    # end
+    
     trainer.step = state_dict['step']
     trainer.model.load_state_dict(state_dict['model'])
     trainer.ema_model.load_state_dict(state_dict['ema'])
