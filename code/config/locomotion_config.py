@@ -7,7 +7,7 @@ class Config(ParamsProto):
     seed = 100
     deevice = torch.device("cuda" if torch.cuda.is_available() else "cpu")    
     bucket = '/home/'
-    dataset = 'hopper-medium-expert-v2'
+    dataset = 'halfcheetah-medium-replay-v2'
     
     ## model
     model = 'models.TemporalUnet'
