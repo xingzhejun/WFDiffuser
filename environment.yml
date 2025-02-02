@@ -1,4 +1,4 @@
-name: decdiff
+name:WFDiffuser
 channels:
 - defaults
 - conda-forge
