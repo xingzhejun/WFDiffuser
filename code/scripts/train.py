@@ -161,21 +161,21 @@ def main(**deps):
     # -------------------------------- instantiate --------------------------------#
     # -----------------------------------------------------------------------------#
 
-    # edit
+    
     model_low = model_low_config()
     model_high = model_high_config()
     diffusion = diffusion_config(model_low = model_low, model_high = model_high)
     trainer = trainer_config(diffusion, dataset, renderer)
-    # end
+    
 
     # -----------------------------------------------------------------------------#
     # ------------------------ test forward & backward pass -----------------------#
     # -----------------------------------------------------------------------------#
 
-    # edit
+    
     utils.report_parameters(model_low)
     utils.report_parameters(model_high)
-    # end
+    
 
     logger.print('Testing forward...', end=' ', flush=True)
     batch = utils.batchify(dataset[0], Config.device)
